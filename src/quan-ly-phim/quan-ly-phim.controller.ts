@@ -1,6 +1,6 @@
-import { Body, Controller, Delete, Get, HttpException, HttpStatus, Param, Post, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpException, HttpStatus, Param, Post, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
 import { QuanLyPhimService } from './quan-ly-phim.service';
-import { ApiBody, ApiConsumes, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiConsumes, ApiTags } from '@nestjs/swagger';
 import { ConfigService } from '@nestjs/config';
 import { phanTrangDto } from 'src/quan-ly-nguoi-dung/dto/phanTrangDto';
 import { phimPhanTrangDate } from './dto/phimPhanTrangDate';
@@ -10,6 +10,7 @@ import { uploadDto } from './dto/uploadDto';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 import { createPhimDto } from './dto/phimDto';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('QuanLyPhim')
 @ApiTags('QuanLyPhim')
@@ -17,6 +18,8 @@ export class QuanLyPhimController {
   constructor(private readonly quanLyPhimService: QuanLyPhimService, private configService : ConfigService) {}
 
   @Get("LayDanhSachBanner")
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   layDanhSachBanner(){
     try{
       return this.quanLyPhimService.layDanhSachBanner();
@@ -29,6 +32,8 @@ export class QuanLyPhimController {
   }
 
   @Get("LayDanhSachPhim")
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   layDanhSachPhim(){
     try{
       return this.quanLyPhimService.layDanhSachPhim();
@@ -42,6 +47,8 @@ export class QuanLyPhimController {
 
   @Post("LayDanhSachPhimPhanTrang")
   @ApiBody({type:phanTrangDto})
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   layDanhSachPhimPhanTrang(@Body() body){
     try{
       let{currentPage, pageItem} = body
@@ -56,6 +63,8 @@ export class QuanLyPhimController {
 
   @Post("LayDanhSachPhimPhanTrangNgay")
   @ApiBody({type:phimPhanTrangDate})
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   layDanhSachPhimPhanTrangNgay(@Body() body){
     try{
       let{currentPage, pageItem, endDate, startDate} = body
@@ -70,6 +79,8 @@ export class QuanLyPhimController {
 
   @Post("TimKiemMaPhim")
   @ApiBody({type:timKiemMaPhimDto})
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   timKiemMaPhim(@Body() body){
     try{
       let {maPhim} = body
@@ -94,6 +105,8 @@ export class QuanLyPhimController {
     })
   }))
   @Post("CapNhatHinhPhim")
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   capNhatHinhPhim(@UploadedFile() file :Express.Multer.File, @Body('maPhim') maPhim){
     try{
       return this.quanLyPhimService.capNhatHinhPhim(file.filename,maPhim)
@@ -116,11 +129,15 @@ export class QuanLyPhimController {
     })
   }))
   @Post('CreatePhim')
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   createPhim(@UploadedFile() file :Express.Multer.File, @Body() createPhimDto: createPhimDto) {
     return this.quanLyPhimService.createPhim(file, createPhimDto);
   }
 
   @Delete('DeletePhim/:maPhim')
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   async xoaPhim(@Param('maPhim') maPhim: number) {
     try{
       

@@ -49,6 +49,8 @@ export class QuanLyNguoiDungController {
     }
   }
   @Get("LayDanhSachNguoiDung")
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   layDanhSachNguoiDung(){
     try{
       return this.quanLyNguoiDungService.layDanhSachNguoiDung();
@@ -64,6 +66,8 @@ export class QuanLyNguoiDungController {
   @ApiBody({
     type:phanTrangDto
   })
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   layDanhSachNguoiDungPhanTrang(@Body() body) {
     try {
       const { currentPage, pageItem } = body;
@@ -79,6 +83,8 @@ export class QuanLyNguoiDungController {
   @ApiBody({
     type:searchStringDto
   })
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   timKiemNguoiDung(@Body() body){
     try{
       let {searchString} = body
@@ -95,6 +101,8 @@ export class QuanLyNguoiDungController {
   @ApiBody({
     type:searchStringPageDto
   })
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   timKiemNguoiDungPhanTrang(@Body() body){
     try{
       let {searchString, currentPage, pageItem} = body

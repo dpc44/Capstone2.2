@@ -14,6 +14,8 @@ export class QuanLyDatVeController {
   }
 
   @Get("LayDanhSachPhongVe/:ma_lich_chieu")
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   layDanhSachPhongVe(@Param("ma_lich_chieu") maLichChieu: number) {
     try {
       return this.quanLyDatVeService.layDanhSachPhongVe(maLichChieu);
@@ -30,6 +32,8 @@ export class QuanLyDatVeController {
     type: taoLichChieuDto
   })
   @Post("TaoLichChieu")
+  @UseGuards(AuthGuard("jwt"))
+  @ApiBearerAuth()
   taoLichChieu(@Body() body) {
     try {
       let { maPhim, ngayChieuGioChieu, maRap, giaVe } = body
