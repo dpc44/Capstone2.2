@@ -1,0 +1,765 @@
+{
+	"info": {
+		"_postman_id": "ea1c0cc8-9288-4c35-80ec-6ef09546d048",
+		"name": "Capstone2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26735180"
+	},
+	"item": [
+		{
+			"name": "QuanLyDatVe",
+			"item": [
+				{
+					"name": "http://localhost:8080/QuanLyDatVe/LayDanhSachPhongVe/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/QuanLyDatVe/LayDanhSachPhongVe/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyDatVe",
+								"LayDanhSachPhongVe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyDatVe/TaoLichChieu",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"maPhim\": 2,\r\n  \"ngayChieuGioChieu\": \"2024-01-24T09:59:06.598Z\",\r\n  \"maRap\": 1,\r\n  \"giaVe\": 3000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyDatVe/TaoLichChieu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyDatVe",
+								"TaoLichChieu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyDatVe/DatVe",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6Nn0sImlhdCI6MTcwNjI0MjYxOSwiZXhwIjoxNzA3MTA2NjE5fQ.yMRQGmf9YlcckffYk9TtvB13vBDHeMJFStGU1eAK70U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"maLichChieu\": 1,\r\n  \"maGhe\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyDatVe/DatVe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyDatVe",
+								"DatVe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "QuanLyNguoiDung",
+			"item": [
+				{
+					"name": "http://localhost:8080/QuanLyNguoiDung/DangKy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matKhau\": \"abc123\",\r\n  \"email\": \"thienan1996@gmail.com\",\r\n  \"soDt\": \"0767356666\",\r\n  \"loaiNguoiDung\": \"Admin\",\r\n  \"hoTen\": \"Cao thien an\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyNguoiDung/DangKy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyNguoiDung",
+								"DangKy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyNguoiDung/Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matKhau\": \"9040255a\",\r\n  \"email\": \"caophat130896@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyNguoiDung/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyNguoiDung",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyNguoiDung/LayDanhSachNguoiDung",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/QuanLyNguoiDung/LayDanhSachNguoiDung",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyNguoiDung",
+								"LayDanhSachNguoiDung"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyNguoiDung/TimKiemNguoiDung",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6OH0sImlhdCI6MTcwNjY4MTIwMSwiZXhwIjoxNzA3NTQ1MjAxfQ.peiqwpeUCmYi5hsXqPY6ehGM3yt1Pje-rfVPyvzD0mA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"searchString\": \"a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyNguoiDung/TimKiemNguoiDung",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyNguoiDung",
+								"TimKiemNguoiDung"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyNguoiDung/TimKiemNguoiDungPhanTrang",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"searchString\": \"a\",\r\n  \"currentPage\": 1,\r\n  \"pageItem\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyNguoiDung/TimKiemNguoiDungPhanTrang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyNguoiDung",
+								"TimKiemNguoiDungPhanTrang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyNguoiDung/LayDanhSachNguoiDungPhanTrang",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"currentPage\": 2,\r\n  \"pageItem\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyNguoiDung/LayDanhSachNguoiDungPhanTrang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyNguoiDung",
+								"LayDanhSachNguoiDungPhanTrang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyNguoiDung/CapNhatThongTinNguoiDung",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"matKhau\": \"abc123\",\r\n  \"soDt\": \"36985214789\",\r\n  \"hoTen\": \"thien an Poli\",\r\n  \"email\": \"thienan1996@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyNguoiDung/CapNhatThongTinNguoiDung",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyNguoiDung",
+								"CapNhatThongTinNguoiDung"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyNguoiDung/XoaNguoiDung",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6Nn0sImlhdCI6MTcwNjI1MTQ2OSwiZXhwIjoxNzA3MTE1NDY5fQ.WLfxgv-u8KL-c4wq3ls56kxys10mF9CTun9iwO1teug",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/QuanLyNguoiDung/XoaNguoiDung",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyNguoiDung",
+								"XoaNguoiDung"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "QuanLyPhim",
+			"item": [
+				{
+					"name": "http://localhost:8080/QuanLyPhim/LayDanhSachBanner",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/QuanLyPhim/LayDanhSachBanner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyPhim",
+								"LayDanhSachBanner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyPhim/LayDanhSachPhim",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/QuanLyPhim/LayDanhSachPhim",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyPhim",
+								"LayDanhSachPhim"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyPhim/LayDanhSachPhimPhanTrang",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"currentPage\": 1,\r\n  \"pageItem\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyPhim/LayDanhSachPhimPhanTrang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyPhim",
+								"LayDanhSachPhimPhanTrang"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyPhim/LayDanhSachPhimPhanTrangNgay",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"startDate\": \"2024-01-01\",\r\n  \"endDate\": \"2024-03-01\",\r\n  \"currentPage\": 1,\r\n  \"pageItem\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyPhim/LayDanhSachPhimPhanTrangNgay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyPhim",
+								"LayDanhSachPhimPhanTrangNgay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyPhim/CapNhatHinhPhim",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/caoph/OneDrive/Desktop/300.webp"
+								},
+								{
+									"key": "maPhim",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyPhim/CapNhatHinhPhim",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyPhim",
+								"CapNhatHinhPhim"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyPhim/TimKiemMaPhim",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"maPhim\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyPhim/TimKiemMaPhim",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyPhim",
+								"TimKiemMaPhim"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyPhim/CreatePhim",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/caoph/OneDrive/Desktop/300.webp"
+								},
+								{
+									"key": "ngayKhoiChieu",
+									"value": "2024-01-26",
+									"type": "text"
+								},
+								{
+									"key": "tenPhim",
+									"value": "test2",
+									"type": "text"
+								},
+								{
+									"key": "trailer",
+									"value": "test2 trailer",
+									"type": "text"
+								},
+								{
+									"key": "moTa",
+									"value": "test2 moTa",
+									"type": "text"
+								},
+								{
+									"key": "danhGia",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "hot",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "dangChieu",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "sapChieu",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/QuanLyPhim/CreatePhim",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyPhim",
+								"CreatePhim"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "QuanLyRap",
+			"item": [
+				{
+					"name": "http://localhost:8080/QuanLyRap/LayThongTinHeThongRap/3",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/QuanLyRap/LayThongTinHeThongRap/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyRap",
+								"LayThongTinHeThongRap",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyRap/LayThongTinCumRapTheoHeThong/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/QuanLyRap/LayThongTinCumRapTheoHeThong/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyRap",
+								"LayThongTinCumRapTheoHeThong",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyRap/LayThongTinLichChieuHeThongRap/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/QuanLyRap/LayThongTinLichChieuHeThongRap/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyRap",
+								"LayThongTinLichChieuHeThongRap",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/QuanLyRap/LayThongTinLichChieuPhim/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/QuanLyRap/LayThongTinLichChieuPhim/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"QuanLyRap",
+								"LayThongTinLichChieuPhim",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
